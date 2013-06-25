@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "MusicHandler.h"
 
 @implementation AppController
 
@@ -20,7 +21,8 @@
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-
+    [NSThread detachNewThreadSelector:@selector(backgroundMusicPlay) toTarget:self withObject:nil];
+    
 	// Create an CCGLView with a RGB565 color buffer, and a depth buffer of 0-bits
 	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	//kEAGLColorFormatRGBA8
@@ -35,7 +37,7 @@
 	director_.wantsFullScreenLayout = YES;
 
 	// Display FSP and SPF
-	[director_ setDisplayStats:YES];
+	[director_ setDisplayStats:NO];
 
 	// set FPS at 60
 	[director_ setAnimationInterval:1.0/60];
@@ -88,6 +90,11 @@
 	[window_ makeKeyAndVisible];
 	
 	return YES;
+}
+
+- (void)backgroundMusicPlay //开另一块线程执行此方法。
+{
+    [MusicHandler notifyPlayGameBgMusic];
 }
 
 // Supported orientations: Landscape. Customize it for your own needs

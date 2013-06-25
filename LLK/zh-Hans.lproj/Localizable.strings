@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  LLK
+
+  Created by ISPIANO on 12-12-24.
+
+*/
+
+
+"GOOD_DESCRIPTION" = "闲时三分钟，常玩更聪明";
+
+
+"BEGIN" = "初级";
+"JUNIOR" = "中级";
+"SENIOR" = "高级";
+
+"HIGHSCORE" = "最高分";
+"HELP" = "帮助";
+"EXIT" = "退出";
