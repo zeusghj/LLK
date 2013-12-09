@@ -614,7 +614,6 @@ void DataCenter::reproduce_game()
         }
     }
     
-    
     init_list();
     
     for (i=0; i<(HEIGHT+2)*(WIDTH+2); i++) {

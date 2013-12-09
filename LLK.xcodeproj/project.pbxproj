@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1804D7081698664C00AA586A /* DataCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1804D7071698664C00AA586A /* DataCenter.cpp */; };
+		1804D7081698664C00AA586A /* DataCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1804D7071698664C00AA586A /* DataCenter.mm */; };
 		180733E61689D06300FFEBAE /* item_click_effect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 180733E51689D06300FFEBAE /* item_click_effect.wav */; };
 		180733E81689D3D700FFEBAE /* llk_hd_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 180733E71689D3D700FFEBAE /* llk_hd_logo.png */; };
 		180733EB1689D4C800FFEBAE /* llk_hd_volume_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 180733E91689D4C800FFEBAE /* llk_hd_volume_off.png */; };
@@ -151,7 +151,7 @@
 
 /* Begin PBXFileReference section */
 		1804D7061698662A00AA586A /* DataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
-		1804D7071698664C00AA586A /* DataCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataCenter.cpp; sourceTree = "<group>"; };
+		1804D7071698664C00AA586A /* DataCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataCenter.mm; sourceTree = "<group>"; };
 		180733E51689D06300FFEBAE /* item_click_effect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = item_click_effect.wav; sourceTree = "<group>"; };
 		180733E71689D3D700FFEBAE /* llk_hd_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llk_hd_logo.png; sourceTree = "<group>"; };
 		180733E91689D4C800FFEBAE /* llk_hd_volume_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = llk_hd_volume_off.png; sourceTree = "<group>"; };
@@ -908,7 +908,7 @@
 			isa = PBXGroup;
 			children = (
 				1804D7061698662A00AA586A /* DataCenter.h */,
-				1804D7071698664C00AA586A /* DataCenter.cpp */,
+				1804D7071698664C00AA586A /* DataCenter.mm */,
 			);
 			name = LLK;
 			sourceTree = "<group>";
@@ -967,7 +967,7 @@
 		187317F61680C00A008F4321 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 187317F91680C00A008F4321 /* Build configuration list for PBXProject "LLK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1132,7 +1132,7 @@
 				1871F29F1685EFC6008A7D38 /* MusicHandler.m in Sources */,
 				180733F71689D67200FFEBAE /* LLK_Choose_Level_Layer.m in Sources */,
 				18DCB7EB168B34F5000BBDDF /* LLK_Game_Layer.mm in Sources */,
-				1804D7081698664C00AA586A /* DataCenter.cpp in Sources */,
+				1804D7081698664C00AA586A /* DataCenter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,6 +1155,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1165,6 +1169,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
@@ -1176,6 +1181,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1184,6 +1193,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;

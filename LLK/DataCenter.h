@@ -14,15 +14,15 @@
 #include <time.h>
 #include <stdarg.h>
 
-#define WIDTH 14  /*十四行十列*/
-#define HEIGHT 10
-#define NUMBER 26
+#define WIDTH            14  /*十四行十列*/
+#define HEIGHT           10
+#define NUMBER           26
 #define CELL_VALUE_PATH -65
 
 #define HAS_NEIGHBOUR 	0
 #define NO_NEIGHBOUR 	1
 
-#define NO_CONNECT 		0
+#define NO_CONNECT 		    0
 #define ONE_LINE_CONNECT 	1
 #define TWO_LINE_CONNECT 	2
 #define THREE_LINE_CONNECT 	3
@@ -33,7 +33,7 @@
 #define SCENARIO_RIGHT 		2
 #define SCENARIO_UP 		3
 #define SCENARIO_DOWN 		4
-#define SCENARIO_LEFT_RIGHT 	5
+#define SCENARIO_LEFT_RIGHT 5
 #define SCENARIO_UP_DOWN 	6
 #define SCENARIO_V_CENTRAL 	7
 #define SCENARIO_H_CENTRAL 	8
@@ -71,11 +71,12 @@ typedef struct _PATH {
 }PATH;
 
 
+
 class DataCenter {
     
 private:
-    CELL_NODE *g_cell;
-    CELL_LIST g_list[];
+    
+    
     
 public:
     DataCenter();
@@ -85,6 +86,8 @@ public:
     //CELL_NODE *get_cell(int column, int row);
     
 public:  //connect
+    CELL_NODE *g_cell;
+    CELL_LIST g_list[];
     
     void init_connect_flag();
     void produce_path (CELL_NODE *start, CELL_NODE *end, CELL_NODE *corner1, CELL_NODE *corner2,PATH *path, int flag);

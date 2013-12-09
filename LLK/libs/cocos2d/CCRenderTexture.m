@@ -390,13 +390,12 @@
 	NSData *imageData;
 
 	if( format == kCCImageFormatPNG )
+    {
 		imageData = UIImagePNGRepresentation( image );
-
-	else if( format == kCCImageFormatJPEG )
-		imageData = UIImageJPEGRepresentation(image, 0.9f);
-
-	else
-		NSAssert(NO, @"Unsupported format");
+    }
+	else {
+        imageData = UIImageJPEGRepresentation(image, 0.9f);
+    }
 	
 	[image release];
 
